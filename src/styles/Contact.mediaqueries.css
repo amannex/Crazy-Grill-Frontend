@@ -1,0 +1,38 @@
+@media screen and (min-width: 850px) and (max-width: 1040px) {
+   .contactSectionContainer {
+      padding: 60px 60px;
+   }
+}
+@media screen and (min-width: 700px) and (max-width: 849px) {
+   .contactSectionContainer {
+      padding: 60px 20px;
+   }
+}
+@media screen and (max-width: 699px) {
+   .contactSectionContainer {
+      padding: 60px 15px;
+   }
+   .formContainer {
+      width: 100%;
+      text-align: center;
+   }
+   .buttonForm {
+      align-self: center !important;
+   }
+   .imageSection {
+      display: none;
+   }
+}
+@media screen and (max-width: 575px) {
+   .contactSectionContainer {
+      padding: 60px 15px;
+   }
+   .contactContainer {
+      height: 100%;
+   }
+}
+@media screen and (min-width: 1500px) {
+   .contactSectionContainer {
+      padding: 60px 180px;
+   }
+}

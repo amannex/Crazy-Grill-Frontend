@@ -1,0 +1,176 @@
+/*HERO SECTION--------------------------BEGIN------------------------ */
+@media screen and (max-width: 750px) and (min-width: 650px) {
+   .heroItem {
+      position: relative;
+      bottom: 70px;
+   }
+   .heroItem h1 {
+      font-size: 4.5rem !important;
+   }
+   .heroItem h3 {
+      font-size: 2.8rem !important;
+   }
+   .button {
+      bottom: 115px;
+   }
+}
+@media screen and (max-width: 649px) and (min-width: 580px) {
+   .heroItem {
+      position: relative;
+      bottom: 65px;
+   }
+   .heroItem h1 {
+      font-size: 3.8rem !important;
+   }
+   .heroItem h3 {
+      font-size: 2.4rem !important;
+   }
+   .heroItem h6 {
+      font-size: 1.8rem !important;
+      bottom: 30px;
+   }
+   .button {
+      bottom: 95px;
+   }
+}
+@media screen and (max-width: 579px) and (min-width: 500px) {
+   .heroItem {
+      position: relative;
+      bottom: 60px;
+   }
+   .heroItem h1 {
+      font-size: 3.5rem !important;
+      margin-bottom: 1.3em !important;
+   }
+   .heroItem h3 {
+      font-size: 2.2rem !important;
+   }
+   .heroItem h6 {
+      font-size: 1.7rem !important;
+      bottom: 27px;
+   }
+   .button {
+      bottom: 88px;
+   }
+}
+@media screen and (max-width: 499px) and (min-width: 380px) {
+   .heroItem h1 {
+      font-size: 3.2rem !important;
+      margin-bottom: 1.9em !important;
+   }
+   .heroItem h3 {
+      font-size: 2rem !important;
+      margin-bottom: 3.5em !important;
+   }
+   .heroItem h6 {
+      font-size: 1.6rem !important;
+      bottom: 30px;
+   }
+   .button {
+      bottom: 80px;
+   }
+   .button a {
+      font-size: 0.57em;
+   }
+}
+
+@media screen and (max-width: 379px) {
+   .heroItem h1 {
+      font-size: 2.8rem !important;
+      margin-bottom: 1.8em !important;
+   }
+   .heroItem h3 {
+      font-size: 1.8rem !important;
+      margin-bottom: 3.3em !important;
+   }
+   .heroItem h6 {
+      font-size: 1.5rem !important;
+      bottom: 20px;
+   }
+   .button {
+      bottom: 70px;
+   }
+   .button a {
+      font-size: 0.37em;
+   }
+}
+
+@media screen and (max-width: 549px) {
+   .carousel-control-prev-icon,
+   .carousel-control-next-icon,
+   .carousel-control-prev-icon:hover,
+   .carousel-control-next-icon:hover {
+      background-image: none !important;
+   }
+}
+/*HERO SECTION-----------------------END--------------------------- */
+/*HEADER SECTION-----------------------END--------------------------- */
+@media screen and (min-width: 768px) {
+   .navbar-expand-md .offcanvas {
+      flex-grow: 2 !important;
+   }
+   .navLink,
+   #offcanvasNavbarDropdown-expand-md {
+      font-weight: 400 !important;
+      font-size: 16px !important;
+      border: none;
+      text-align: center;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: 5px !important;
+   }
+   a.navLink.nav-link,
+   a#offcanvasNavbarDropdown-expand-md.dropdown-toggle.nav-link {
+      width: fit-content;
+      margin-right: 20px;
+   }
+   .navLink {
+      width: 80px;
+   }
+   #offcanvasNavbarDropdown-expand-md {
+      width: 40px;
+      margin-left: 8px;
+   }
+   .navLink:hover,
+   #offcanvasNavbarDropdown-expand-md:hover {
+      color: #c0946c !important;
+   }
+   .navDropdownItem {
+      font-weight: 400 !important;
+      font-size: 16px !important;
+      color: #555 !important;
+   }
+}
+@media screen and (max-width: 767px) and (min-width: 576px) {
+   .navLink,
+   #offcanvasNavbarDropdown-expand-md {
+      width: 70px;
+   }
+}
+@media screen and (max-width: 767px) {
+   .headerSocialMedia {
+      display: flex;
+      flex-direction: row;
+   }
+   .navLink:hover,
+   #offcanvasNavbarDropdown-expand-md:hover {
+      color: #c0946c !important;
+   }
+   #logoMobileHeader {
+      max-height: 120px;
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   #logoMobileHeader img {
+      width: 140px;
+      height: 133px;
+      margin-top: 100px;
+   }
+   .navLink {
+      border: none !important;
+   }
+}
+
+/*HEADER SECTION-----------------------END--------------------------- */

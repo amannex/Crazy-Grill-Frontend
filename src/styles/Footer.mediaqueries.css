@@ -1,0 +1,32 @@
+@media screen and (min-width: 992px) and (max-width: 1205px) {
+   .preFooter {
+      padding: 40px 70px 40px 70px;
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+   .preFooter {
+      padding: 40px 30px 40px 30px;
+   }
+   .logoContainer {
+      justify-content: center;
+      padding-bottom: 20px;
+   }
+}
+@media screen and (min-width: 450px) and (max-width: 767px) {
+   .preFooter {
+      padding: 40px 10px 40px 10px;
+   }
+   .logoContainer {
+      justify-content: center;
+      padding-bottom: 20px;
+   }
+}
+@media screen and (max-width: 449px) {
+   .preFooter {
+      padding: 40px 4px 40px 4px;
+   }
+   .logoContainer {
+      justify-content: center;
+      padding-bottom: 20px;
+   }
+}

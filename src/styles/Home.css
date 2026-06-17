@@ -1,0 +1,264 @@
+/*HERO SECTION-----------------------BEGIN--------------------------- */
+@keyframes run {
+   0% {
+      right: 35px;
+   }
+   50% {
+      right: 30px;
+   }
+   100% {
+      right: 30px;
+   }
+}
+@keyframes runPrev {
+   0% {
+      left: 35px;
+   }
+   50% {
+      left: 30px;
+   }
+   100% {
+      left: 30px;
+   }
+}
+@keyframes zoom-in-zoom-out {
+   0% {
+      transform: scale(1, 1);
+   }
+   50% {
+      transform: scale(1.2, 1.2);
+   }
+   100% {
+      transform: scale(1.2, 1.2);
+   }
+}
+
+.heroItem {
+   /* Set a specific height */
+   height: 600px;
+}
+.heroItem img {
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+   animation: zoom-in-zoom-out 4s linear infinite;
+   animation-iteration-count: 1;
+   animation-timing-function: cubic-bezier(0, 0, 0.1, 0.1);
+}
+.carousel-control-prev,
+.carousel-control-next {
+   opacity: inherit !important;
+}
+.carousel-control-prev-icon {
+   background-image: url("../../public/assets/home/icons/left-arrow-circle.png") !important;
+   position: absolute;
+   left: 30px;
+   width: 2.5rem !important;
+   height: 2.5rem !important;
+   animation: linear infinite;
+   animation-name: runPrev;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+}
+.carousel-control-prev-icon:hover {
+   background-image: url("../../public/assets/home/icons/left-arrow-circle-hover.png") !important;
+   border-radius: 20px !important;
+}
+.carousel-control-next-icon {
+   background-image: url("../../public/assets/home/icons/next-arrow-circle.png") !important;
+   position: absolute;
+   right: 30px;
+   width: 2.5rem !important;
+   height: 2.5rem !important;
+   animation: linear infinite;
+   animation-name: run;
+   animation-duration: 1s;
+   animation-iteration-count: 1;
+}
+.carousel-control-next-icon:hover {
+   background-image: url("../../public/assets/home/icons/back-trans-recolor.png") !important;
+   border-radius: 20px !important;
+   /*We need to fix the border white issue*/
+}
+.heroItem h1 {
+   font-size: 6.5rem !important;
+   font-weight: bolder;
+   text-transform: uppercase;
+   text-rendering: optimizeSpeed;
+   margin-bottom: 1em !important;
+   line-height: 0 !important;
+   text-shadow: 50px 50px 50px #28282b;
+}
+.heroItem h3 {
+   font-size: 3.5rem !important;
+   font-weight: 300;
+   text-transform: uppercase;
+   text-rendering: optimizeSpeed;
+   margin-bottom: 3em !important;
+   line-height: 0 !important;
+   position: relative;
+   bottom: 15px;
+   text-shadow: 25px 25px 25px #28282b;
+}
+.heroItem h6 {
+   font-size: 2rem !important;
+   font-weight: 200 !important;
+   text-rendering: optimizeSpeed;
+   position: relative;
+   bottom: 45px;
+   font-family: "Great Vibes" !important;
+}
+.buttonsContainer {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+.button {
+   position: relative;
+   bottom: 135px;
+   display: inline-block;
+   box-sizing: border-box;
+   border: 2px solid white;
+   vertical-align: middle;
+   border-radius: 0;
+   margin-right: 1em;
+   padding: 0 1.2em;
+   width: 165px !important;
+   max-width: 100%;
+   line-height: 2.4em;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   background-color: #fff;
+   cursor: pointer;
+}
+.button a {
+   text-transform: uppercase;
+   font-size: 0.97em;
+   cursor: pointer;
+   font-weight: bolder;
+   text-align: center;
+   text-decoration: none;
+   text-shadow: none;
+   min-height: 2.5em;
+   letter-spacing: 0.03em;
+   color: #c0946c;
+}
+.button:hover {
+   background-color: #c0946c;
+   border: 2px solid #c0946c;
+}
+
+/*HERO SECTION-----------------------END--------------------------- */
+/*MENU SECTION-----------------------BEGIN--------------------------- */
+
+.cardMenu {
+   background-color: #c0946c;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 300px;
+   width: 100%;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   cursor: pointer;
+}
+
+.cardImage {
+   width: 100%;
+   height: 100%;
+   background-size: cover !important;
+}
+
+.cardTitleContainer {
+   background-color: #000;
+   width: 100%;
+   text-align: center;
+   height: 45px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   opacity: 0.7;
+   position: relative;
+   bottom: 2.7em;
+   border-radius: 10px;
+}
+.cardTitleContainer h6 {
+   margin-bottom: 0;
+   color: #fff;
+   font-weight: bolder;
+   font-size: 1.2em;
+}
+/*MENU SECTION-----------------------END--------------------------- */
+/*HEADER-----------------------BEGIN--------------------------- */
+.mb-3 {
+   margin-bottom: 0 !important;
+}
+.mb-3.navbar.navbar-expand-sm.navbar-light,
+.mb-3.menu.navbar.navbar-expand-md.navbar-light.sticky-top {
+   margin-bottom: 0 !important;
+}
+
+a.navbar-brand {
+   flex-grow: 2;
+   text-align: center;
+}
+.mb-3.menu {
+   z-index: 999;
+   height: 80px;
+}
+#logo {
+   max-height: 120px;
+   display: flex;
+   justify-content: center;
+}
+#logo img {
+   width: 70px;
+   height: 70px;
+   text-shadow: 3px 3px 1px #ccc;
+   -webkit-text-shadow: 3px 3px 1px #ccc;
+   -moz-text-shadow: 3px 3px 1px #ccc;
+}
+.navbar-toggler-icon {
+   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' class='bi bi-list' viewBox='0 0 16 16'%3e%3cpath fill-rule='evenodd' d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'/%3e%3c/svg%3e") !important;
+}
+.navbar {
+   --bs-navbar-toggler-border-color: #fff !important;
+}
+.btn-close {
+   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' class='bi bi-x-lg' viewBox='0 0 16 16'%3e%3cpath d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z'/%3e%3c/svg%3e") !important;
+   border: 1px solid white !important;
+   opacity: 1 !important;
+   padding: inherit !important;
+}
+.btn-close:hover {
+   opacity: 0.7 !important;
+}
+.navLink,
+#offcanvasNavbarDropdown-expand-md {
+   color: #ffffff !important;
+}
+.quebec {
+   display: flex !important;
+   flex-direction: row !important;
+}
+.quebec img {
+   margin-left: 5px !important;
+}
+button.navbar-toggler {
+   position: absolute;
+   left: 15px;
+}
+.headerSocialMedia,
+#logoMobileHeader {
+   display: none;
+}
+.headerSocialMedia .icons {
+   margin-right: 10px;
+   margin-top: 10px;
+   cursor: pointer;
+}
+
+/*HEADER-----------------------END--------------------------- */

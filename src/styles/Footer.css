@@ -1,0 +1,92 @@
+footer {
+   background-color: #28282b;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.preFooter {
+   padding: 40px 140px 40px 140px;
+   width: 100%;
+}
+.logoContainer {
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.preFooterWidget {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   width: 100%;
+   height: 100%;
+}
+.titleWidget {
+   text-align: left;
+   height: 20%;
+   width: 100%;
+   display: flex;
+   align-items: flex-end;
+   padding: 0 30px;
+}
+.titleWidget h6 {
+   font-size: 18px;
+   color: #fff;
+}
+.infoWidget {
+   height: 80%;
+   width: 100%;
+   padding: 15px 30px;
+}
+.infoWidget li,
+.detailsWidget p {
+   font-size: 16px;
+   color: #fff;
+   font-weight: 300;
+}
+.infoWidget li {
+   padding-bottom: 5px;
+}
+.infoWidget li a {
+   text-decoration: underline;
+}
+.infoWidget li a:hover {
+   color: #c0946c;
+}
+.detailsWidget {
+   display: flex;
+   flex-direction: row;
+   padding-bottom: 5px;
+}
+.detailsWidget .icons {
+   margin-right: 10px;
+}
+.detailsWidget a {
+   cursor: pointer;
+   color: #fff;
+}
+.detailsWidget a:hover {
+   cursor: pointer;
+   color: #c0946c;
+}
+.detailsWidget .iconsSocialMedia {
+   margin-right: 15px;
+   margin-top: 20px;
+   cursor: pointer;
+}
+.copyright {
+   width: 100%;
+   padding: 10px 0;
+}
+.copyrightText {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 16px;
+   color: #fff;
+   font-weight: 400;
+   width: 100%;
+   opacity: 0.6;
+}
