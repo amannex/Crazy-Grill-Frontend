@@ -52,8 +52,8 @@ const Hero = () => {
          style={{ position: "relative", bottom: "5.9em" }}
          interval={4000}
       >  
-         {  slides.map(slide => (<Carousel.Item className="heroItem">
-            <img className="d-block" src={carouselThree} alt="Third slide" />
+         {  slides.map(slide => (<Carousel.Item className="heroItem" key={slide.featured_image_url}>
+            <img className="d-block" src={slide.featured_image_url} alt="Third slide" />
             <Caption
                slogan={slide.acf.caption.slogan}
                title={slide.acf.caption.headline}
