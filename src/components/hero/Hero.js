@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { useTranslation } from "react-i18next";
 import { Caption } from "../caption";
@@ -11,6 +11,28 @@ const Hero = () => {
    const [isBtnMenuColored, setIsBtnMenuColored] = useState(false);
    const [isBtnEventsColored, setIsBtnEventsColored] = useState(false);
    const { t } = useTranslation();
+   const [slides, setSlides] = useState([]);
+
+   useEffect(() => {
+      loadSlides();
+   }, []);
+
+   const loadSlides = async () => {
+      try{
+         const response = await fetch("http://localhost:8888/crazy-grill-backend/wp-json/wp/v2/slides");
+         if(!response.ok){
+            throw new Error("Failed to fetch slides");
+         }
+         const slides = await response.json();
+
+         if(slides &&slides.length > 0){
+            console.log("slides", slides);
+            setSlides(slides);
+         }
+      } catch (error) {
+         console.error("Error fetching slides:", error);
+      }
+   };
 
    const handleBtnMenuColor = () => {
       setIsBtnMenuColored(previousElement => !previousElement);
@@ -29,45 +51,21 @@ const Hero = () => {
          nextIcon={!isDispalyedCarouselIcons && undefined}
          style={{ position: "relative", bottom: "5.9em" }}
          interval={4000}
-      >
-         <Carousel.Item className="heroItem">
-            <img className="d-block" src={carouselOne} alt="First slide" />
-            <Caption
-               slogan={t("FIRST_SLIDE.SLOGAN")}
-               title={t("FIRST_SLIDE.TITLE")}
-               subTitle={t("FIRST_SLIDE.SUB_TITLE")}
-               handleBtnMenuColor={handleBtnMenuColor}
-               handleBtnEventsColor={handleBtnEventsColor}
-               isBtnMenuColored={isBtnMenuColored}
-               isBtnEventsColored={isBtnEventsColored}
-            />
-         </Carousel.Item>
-
-         <Carousel.Item className="heroItem">
-            <img className="d-block" src={carouselTwo} alt="Second slide" />
-            <Caption
-               slogan={t("SECOND_SLIDE.SLOGAN")}
-               title={t("SECOND_SLIDE.TITLE")}
-               subTitle={t("SECOND_SLIDE.SUB_TITLE")}
-               handleBtnMenuColor={handleBtnMenuColor}
-               handleBtnEventsColor={handleBtnEventsColor}
-               isBtnMenuColored={isBtnMenuColored}
-               isBtnEventsColored={isBtnEventsColored}
-            />
-         </Carousel.Item>
-
-         <Carousel.Item className="heroItem">
+      >  
+         {  slides.map(slide => (<Carousel.Item className="heroItem">
             <img className="d-block" src={carouselThree} alt="Third slide" />
             <Caption
-               slogan={t("THIRD_SLIDE.SLOGAN")}
-               title={t("THIRD_SLIDE.TITLE")}
-               subTitle={t("THIRD_SLIDE.SUB_TITLE")}
+               slogan={slide.acf.caption.slogan}
+               title={slide.acf.caption.headline}
+               subTitle={slide.acf.caption.subheading}
                handleBtnMenuColor={handleBtnMenuColor}
                handleBtnEventsColor={handleBtnEventsColor}
                isBtnMenuColored={isBtnMenuColored}
                isBtnEventsColored={isBtnEventsColored}
             />
-         </Carousel.Item>
+         </Carousel.Item>))  
+         }
+         
       </Carousel>
    );
 };

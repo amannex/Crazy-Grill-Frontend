@@ -116,7 +116,7 @@
 }
 .button {
    position: relative;
-   bottom: 135px;
+   bottom: 100px;
    display: inline-block;
    box-sizing: border-box;
    border: 2px solid white;
