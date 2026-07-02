@@ -1,7 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import { CardsMenu } from "../cardsMenu";
-import { cardsNames } from "../../../constants";
+import { CardsMenu } from"../cardsMenu";
 import { SectionTitle } from "../sectionTitle";
 import { useTranslation } from "react-i18next";
 import { COLORS } from "../../configs/constants.js";
@@ -18,7 +17,7 @@ const HomeMenuSection = () => {
             secondLineDescription={t("HOME_MENU_SECOND_DESCRIPTION")}
             bgColor={COLORS.tertiary}
          />
-         <CardsMenu cardsNames={cardsNames} />
+         <CardsMenu />
       </Container>
    );
 };

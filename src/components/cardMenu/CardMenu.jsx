@@ -1,21 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Col from "react-bootstrap/Col";
 
-const CardMenu = ({ imageName, name }) => {
-   const [image, setImage] = useState(null);
+const CardMenu = ({ imageUrl, name }) => {
 
-   useEffect(() => {
-      const importImage = async () => {
-         try {
-            const response = await import(`../../../public/assets/home/images/${imageName}`);
-            setImage(response.default);
-         } catch (err) {
-            console.log("Error While trying trying to load the image.", err);
-         }
-      };
-
-      importImage();
-   }, []);
    return (
       <Col className="colMenu" xs={12} sm={12} md={4} lg={4}>
          <>
@@ -23,7 +10,7 @@ const CardMenu = ({ imageName, name }) => {
                <div
                   className="cardImage hover:scale-125 transform transition duration-500"
                   style={{
-                     background: ` no-repeat center/100% url(${image})`
+                     background: ` no-repeat center/100% url(${imageUrl})`
                   }}
                ></div>
             </div>
